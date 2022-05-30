@@ -1,13 +1,10 @@
 class Solution:
-    def myAtoi(self, s: str) -> int:
-        s = s.replace(' ','')
-        max_num = pow(2,31) - 1
-        min_num = -pow(2,31)
-        if s[0] == '-':
-            s= s.replace('-','')
-            return -int(s)
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
+        if x == x[::-1]:
+            return True
         else:
-            return int(s)
+            return False
 
 sol = Solution()
 sol.myAtoi("-321")
