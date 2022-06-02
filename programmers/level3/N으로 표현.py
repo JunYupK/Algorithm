@@ -4,5 +4,5 @@ def solution(N, number):
     two = N//N
 
     for i in range(number - 1):
-
+        x = 0
     return answer
