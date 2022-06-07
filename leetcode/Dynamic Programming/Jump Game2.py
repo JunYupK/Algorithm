@@ -6,6 +6,13 @@ class Solution:
         count = [0] * len(nums)
         dp[0] = nums[0]
         count[0] = 1
+        for i in range(1, len(nums)):
+            for j in range(i, i+dp[i-1]):
+                if nums[j] >= len(nums) - 1:
+                    return count[i-1] + 1
+            dp[i] = i + nums[i]
+            count[i] = count[i-1] + 1
+
 
 
 sol = Solution()
