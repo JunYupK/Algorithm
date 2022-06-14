@@ -1,25 +1,20 @@
-from collections import defaultdict
-def solution(logs):
+def solution(p):
     answer = []
-    user = {}
-    problem = defaultdict(list)
-    for log in logs:
-        log = log.split(" ")
-        user[log[0]] = 1
-        if problem.get(log[1]) is None:
-            problem[log[1]].append(log[0])
-        else:
-            if log[0] not in problem[log[1]]:
-                problem[log[1]].append(log[0])
+    num_dic = {}
+    for num in range(len(p)):
+        num_dic[num] = 0
+    i = 0
+    count = 0
+    while i != len(p):
+        j = p.index(min(p[i:]))
+        if p[i] != p[j]:
+            tmp = p[i]
+            p[i] = p[j]
+            p[j] = tmp
+            num_dic[i] += 1
+            num_dic[j] += 1
+        i += 1
+    return list(num_dic.values())
 
-
-    for k, v in problem.items():
-        if len(v) >= len(user)/2:
-            answer.append(k)
-
-    answer.sort()
-
-    return answer
-
-logs = ["morgan sort", "felix sort", "morgan sqrt", "morgan sqrt", "rohan reverse", "rohan reverse"]
-solution(logs)
+p = [2, 5, 3, 1,4]
+solution(p)
