@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me to hide paragraphs</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".test").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").dblclick(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you double-click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").mouseenter(function(){
+    alert("You entered p1!");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">Enter this paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").mouseleave(function(){
+    alert("Bye! You now leave p1!");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").mousedown(function(){
+    alert("Mouse down over p1!");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").mouseup(function(){
+    alert("Mouse up over p1!");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").hover(function(){
+    alert("You entered p1!");
+  },
+  function(){
+    alert("Bye! You now leave p1!");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">This is a paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+</script>
+</head>
+<body>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "green");
+  });
+});
+</script>
+</head>
+<body>
+
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").on("click", function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    },
+    click: function(){
+      $(this).css("background-color", "yellow");
+    }
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Click or move the mouse pointer over this paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p").hide();
+  });
+  $("#show").click(function(){
+    $("p").show();
+  });
+});
+</script>
+</head>
+<body>
+
+<p>If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide(1000);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Toggle between hiding and showing the paragraphs</button>
+
+<p>This is a paragraph with little content.</p>
+<p>This is another small paragraph.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button>Click to fade out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button>Click to fade in/out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeTo("slow", 0.15);
+    $("#div2").fadeTo("slow", 0.4);
+    $("#div3").fadeTo("slow", 0.7);
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeTo() with different parameters.</p>
+
+<button>Click to fade boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideUp("slow");
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+}
+</style>
+</head>
+<body>
+
+<div id="flip">Click to slide up panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<div id="flip">Click to slide the panel down or up</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left: '250px'});
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      left: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      left: '250px',
+      height: '+=150px',
+      width: '+=150px'
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({
+      height: 'toggle'
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Click the button multiple times to toggle the animation.</p>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");
+    div.animate({height: '300px', opacity: '0.4'}, "slow");
+    div.animate({width: '300px', opacity: '0.8'}, "slow");
+    div.animate({height: '100px', opacity: '0.4'}, "slow");
+    div.animate({width: '100px', opacity: '0.8'}, "slow");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var div = $("div");
+    div.animate({left: '100px'}, "slow");
+    div.animate({fontSize: '3em'}, "slow");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown(5000);
+  });
+  $("#stop").click(function(){
+    $("#panel").stop();
+  });
+});
+</script>
+<style>
+#panel, #flip {
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  border: solid 1px #666;
+  border-radius: 3px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<button id="stop">Stop sliding</button>
+
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide(1000);
+    alert("The paragraph is now hidden");
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">jQuery is fun!!</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "red")
+      .slideUp(2000)
+      .slideDown(2000);
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">jQuery is fun!!</p>
+
+<button>Click me</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    alert("Text: " + $("#test").text());
+  });
+  $("#btn2").click(function(){
+    alert("HTML: " + $("#test").html());
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Value: " + $("#test").val());
+  });
+});
+</script>
+</head>
+<body>
+
+<p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+
+<button>Show Value</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert($("#w3s").attr("href"));
+  });
+});
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button>Show href Value</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text("Hello world!");
+  });
+  $("#btn2").click(function(){
+    $("#test2").html("<b>Hello world!</b>");
+  });
+  $("#btn3").click(function(){
+    $("#test3").val("Dolly Duck");
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="test1">This is a paragraph.</p>
+<p id="test2">This is another paragraph.</p>
+
+<p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+<button id="btn1">Set Text</button>
+<button id="btn2">Set HTML</button>
+<button id="btn3">Set Value</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#test1").text(function(i, origText){
+      return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+    });
+  });
+
+  $("#btn2").click(function(){
+    $("#test2").html(function(i, origText){
+      return "Old html: " + origText + " New html: Hello <b>world!</b> (index: " + i + ")";
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p id="test1">This is a <b>bold</b> paragraph.</p>
+<p id="test2">This is another <b>bold</b> paragraph.</p>
+
+<button id="btn1">Show Old/New Text</button>
+<button id="btn2">Show Old/New HTML</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", "https://www.w3schools.com/jquery/");
+  });
+});
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button>Change href Value</button>
+
+<p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr({
+      "href" : "https://www.w3schools.com/jquery/",
+      "title" : "W3Schools jQuery Tutorial"
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" title="some title" id="w3s">W3Schools.com</a></p>
+
+<button>Change href and title</button>
+
+<p>Mouse over the link to see that the href attribute has changed and a title attribute is set.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#w3s").attr("href", function(i, origValue){
+      return origValue + "/jquery/";
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<p><a href="https://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+
+<button>Change href Value</button>
+
+<p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p").prepend("<b>Prepended text</b>. ");
+  });
+  $("#btn2").click(function(){
+    $("ol").prepend("<li>Prepended item</li>");
+  });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Prepend text</button>
+<button id="btn2">Prepend list item</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+function appendText() {
+  var txt1 = "<p>Text.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+}
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("img").before("<b>Before</b>");
+  });
+
+  $("#btn2").click(function(){
+    $("img").after("<i>After</i>");
+  });
+});
+</script>
+</head>
+<body>
+
+<img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140"><br><br>
+
+<button id="btn1">Insert before</button>
+<button id="btn2">Insert after</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+function afterText() {
+  var txt1 = "<b>I </b>";           // Create element with HTML
+  var txt2 = $("<i></i>").text("love ");  // Create with jQuery
+  var txt3 = document.createElement("b");   // Create with DOM
+  txt3.innerHTML = "jQuery!";
+  $("img").after(txt1, txt2, txt3);    // Insert new elements after img
+}
+</script>
+</head>
+<body>
+
+<img src="/images/w3jquery.gif" alt="jQuery" width="100" height="140">
+
+<p>Click the button to insert text after the image.</p>
+
+<button onclick="afterText()">Insert after</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").remove();
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+
+</div>
+<br>
+
+<button>Remove div element</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").empty();
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+This is some text in the div.
+<p>This is a paragraph in the div.</p>
+<p>This is another paragraph in the div.</p>
+
+</div>
+<br>
+
+<button>Empty the div element</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").remove(".test");
+  });
+});
+</script>
+<style>
+.test {
+  color: red;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p class="test">This is another paragraph.</p>
+<p class="test">This is another paragraph.</p>
+
+<button>Remove all p elements with class="test"</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").remove(".test, .demo");
+  });
+});
+</script>
+<style>
+.test {
+  color: red;
+  font-size: 20px;
+}
+
+.demo {
+  color: green;
+  font-size: 25px;
+}
+</style>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<p class="test">This is p element with class="test".</p>
+<p class="test">This is p element with class="test".</p>
+<p class="demo">This is p element with class="demo".</p>
+
+<button>Remove all p elements with class="test" and class="demo"</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<div>This is some important text!</div><br>
+
+<button>Add classes to elements</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").addClass("important blue");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1">This is some text.</div>
+<div id="div2">This is some text.</div>
+<br>
+
+<button>Add classes to first div element</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").removeClass("blue");
+  });
+});
+</script>
+<style>
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1 class="blue">Heading 1</h1>
+<h2 class="blue">Heading 2</h2>
+
+<p class="blue">This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Remove class from elements</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("h1, h2, p").toggleClass("blue");
+  });
+});
+</script>
+<style>
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Toggle class</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    alert("Background color = " + $("p").css("background-color"));
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<button>Return background-color of p</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").css("background-color", "yellow");
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<p>This is a paragraph.</p>
+
+<button>Set background-color of p</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").css({"background-color": "yellow", "font-size": "200%"});
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p style="background-color:#ff0000">This is a paragraph.</p>
+<p style="background-color:#00ff00">This is a paragraph.</p>
+<p style="background-color:#0000ff">This is a paragraph.</p>
+
+<p>This is a paragraph.</p>
+
+<button>Set multiple styles for p</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height();
+    $("#div1").html(txt);
+  });
+});
+</script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button>Display dimensions of div</button>
+
+<p>width() - returns the width of an element.</p>
+<p>height() - returns the height of an element.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height() + "</br>";
+    txt += "Inner width of div: " + $("#div1").innerWidth() + "</br>";
+    txt += "Inner height of div: " + $("#div1").innerHeight();
+    $("#div1").html(txt);
+  });
+});
+</script>
+</head>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button>Display dimensions of div</button>
+
+<p>innerWidth() - returns the width of an element (includes padding).</p>
+<p>innerHeight() - returns the height of an element (includes padding).</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height() + "</br>";
+    txt += "Outer width of div: " + $("#div1").outerWidth() + "</br>";
+    txt += "Outer height of div: " + $("#div1").outerHeight();
+    $("#div1").html(txt);
+  });
+});
+</script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button>Display dimensions of div</button>
+
+<p>outerWidth() - returns the width of an element (includes padding and border).</p>
+<p>outerHeight() - returns the height of an element (includes padding and border).</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt = "";
+    txt += "Width of div: " + $("#div1").width() + "</br>";
+    txt += "Height of div: " + $("#div1").height() + "</br>";
+    txt += "Outer width of div (margin included): " + $("#div1").outerWidth(true) + "</br>";
+    txt += "Outer height of div (margin included): " + $("#div1").outerHeight(true);
+    $("#div1").html(txt);
+  });
+});
+</script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button>Display dimensions of div</button>
+
+<p>outerWidth(true) - returns the width of an element (includes padding, border, and margin).</p>
+<p>outerHeight(true) - returns the height of an element (includes padding, border, and margin).</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var txt = "";
+    txt += "Document width/height: " + $(document).width();
+    txt += "x" + $(document).height() + "\n";
+    txt += "Window width/height: " + $(window).width();
+    txt += "x" + $(window).height();
+    alert(txt);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Display dimensions of document and window</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").width(500).height(500);
+  });
+});
+</script>
+<style>
+#div1 {
+  height: 100px;
+  width: 300px;
+  padding: 10px;
+  margin: 3px;
+  border: 1px solid blue;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<div id="div1"></div>
+<br>
+
+<button>Resize div</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="width:500px;">div (grandparent)
+    <p>p (direct parent)
+      <span>span</span>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").parents().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<!-- The outer red border, before the body element, is the html element (also an ancestor) -->
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").parents("ul").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+
+<body class="ancestors"> body (great-great-grandparent)
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").children().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element)
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").children("p.first").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element)
+  <p class="first">p (child)
+    <span>span (grandchild)</span>
+  </p>
+  <p class="second">p (child)
+    <span>span (grandchild)</span>
+  </p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").find("span").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element)
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.descendants * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").find("*").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="descendants" style="width:500px;">div (current element)
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").siblings().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").siblings("p").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").next().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").nextAll().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <p>p</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.siblings * {
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("h2").nextUntil("h6").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <h5>h5</h5>
+  <h6>h6</h6>
+  <p>p</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").first().css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>This is a paragraph.</p>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in a div.</p>
+  <p>Another paragraph in a div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("div").last().css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>This is a paragraph.</p>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in a div.</p>
+  <p>Another paragraph in a div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").eq(1).css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>My name is Donald (index 0).</p>
+<p>Donald Duck (index 1).</p>
+<p>I live in Duckburg (index 2).</p>
+<p>My best friend is Mickey (index 3).</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").filter(".intro").css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>My name is Donald.</p>
+<p class="intro">I live in Duckburg.</p>
+<p class="intro">I love Duckburg.</p>
+<p>My best friend is Mickey.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").not(".intro").css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>My name is Donald.</p>
+<p class="intro">I live in Duckburg.</p>
+<p class="intro">I love Duckburg.</p>
+<p>My best friend is Mickey.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************

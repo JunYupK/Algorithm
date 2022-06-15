@@ -1,0 +1,2421 @@
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+var x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+
+function myFunction(a, b) {
+  return a * b;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>A function can be stored in a variable:</p>
+<p id="demo"></p>
+
+<script>
+const x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>After a function has been stored in a variable,
+the variable can be used as a function:</p>
+
+<p id="demo"></p>
+
+<script>
+const x = function (a, b) {return a * b};
+document.getElementById("demo").innerHTML = x(4, 3);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>JavaScript has an built-in function constructor.</p>
+<p id="demo"></p>
+
+<script>
+const myFunction = new Function("a", "b", "return a * b");
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p id="demo"></p>
+
+<script>
+const myFunction = function (a, b) {return a * b}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Functions can be invoked automatically without being called:</p>
+
+<p id="demo"></p>
+
+<script>
+(function () {
+  document.getElementById("demo").innerHTML = "Hello! I called myself";
+})();
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>Functions can be treated as values:</p>
+<p>x = myFunction(4,3) or x = 12</p>
+<p>In both cases, x becomes a number with the value of 12.</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+let x = myFunction(4, 3);
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>Functions can be used in expressions.</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+let x = myFunction(4, 3) * 2;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The arguments.length property returns the number of arguments received by the function:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return arguments.length;
+}
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The toString() method returns the function as a string:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction.toString();
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Functions</h2>
+
+<p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = (x, y) => x * y;
+document.getElementById("demo").innerHTML = x(5, 5);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Functions</h2>
+
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = (x, y) => { return x * y };
+document.getElementById("demo").innerHTML = x(5, 5);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Setting a default value to a function parameter.</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(x, y) {
+  if (y === undefined) {
+    y = 2;
+  }
+  return x * y;
+}
+document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Setting a default value to a function parameter (y=2).</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(x, y = 2) {
+  return x * y;
+}
+document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>Finding the largest number.</p>
+<p id="demo"></p>
+
+<script>
+function findMax() {
+  let max = -Infinity;
+  for(let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+}
+document.getElementById("demo").innerHTML = findMax(4, 5, 6);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>Sum of all arguments:</p>
+<p id="demo"></p>
+
+<script>
+function sumAll() {
+  let sum = 0;
+  for(let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  return sum;
+}
+document.getElementById("demo").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The global function (myFunction) returns the product of the arguments (a ,b):</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo").innerHTML = myFunction(10, 2);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>Global functions automatically become window methods. Invoking myFunction() is the same as invoking window.myFunction().</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(a, b) {
+  return a * b;
+}
+document.getElementById("demo").innerHTML = window.myFunction(10, 2);
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>In HTML the value of <b>this</b>, in a global function, is the window object.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = myFunction();
+function myFunction() {
+  return this;
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>myObject.fullName() will return John Doe:</p>
+
+<p id="demo"></p>
+
+<script>
+const myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+document.getElementById("demo").innerHTML = myObject.fullName();
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>The value of <b>this</b>, in an object method, is the owner object.</p>
+
+<p id="demo"></p>
+
+<script>
+const myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this;
+  }
+}
+document.getElementById("demo").innerHTML = myObject.fullName();
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>In this example, myFunction is a function constructor:</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(arg1, arg2) {
+  this.firstName = arg1;
+  this.lastName  = arg2;
+}
+
+const myObj = new myFunction("John","Doe")
+document.getElementById("demo").innerHTML = myObj.firstName;
+</script>
+
+</body>
+</html>
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p id="intro">Finding HTML Elements by Id</p>
+<p>This example demonstrates the <b>getElementsById</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML =
+"The text from the intro paragraph is: " + element.innerHTML;
+
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Tag Name.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML =
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementsByClassName("intro");
+document.getElementById("demo").innerHTML =
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML =
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+<form id="frm1" action="/action_page.php">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<p>These are the values of each element in the form:</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.forms["frm1"];
+let text = "";
+for (let i = 0; i < x.length ;i++) {
+  text += x.elements[i].value + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript can Change HTML</h2>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">Old Heading</h1>
+
+<script>
+const element = document.getElementById("id01");
+element.innerHTML = "New Heading";
+</script>
+
+<p>JavaScript changed "Old Heading" to "New Heading".</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "landscape.jpg";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Date : " + Date();
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Bla, bla, bla</p>
+
+<script>
+document.write(Date());
+</script>
+
+<p>Bla, bla, bla</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<form action="/action_page.php" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click submit, without filling out the text field,
+your browser will display an error message.</p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "larger";
+</script>
+
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button"
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!Doctype html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+}
+</style>
+<body>
+
+<h2>My First JavaScript Animation</h2>
+
+<div id="container">
+<div id="animate"></div>
+</div>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="changeText(this)">Click on this text!</h2>
+
+<script>
+function changeText(id) {
+  id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<p>Click "Try it" to execute the displayDate() function.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").onclick = displayDate;
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<h2>JavaScript HTML Events</h2>
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+  var text = "";
+  if (navigator.cookieEnabled == true) {
+    text = "Cookies are enabled.";
+  } else {
+    text = "Cookies are not enabled.";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", function() {
+  alert("Hello World!");
+});
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", myFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add two click events to the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+  alert ("Hello World!");
+}
+
+function someOtherFunction() {
+  alert ("This function was also executed!");
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+x.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>";
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>";
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method on the window object.</p>
+
+<p>Try resizing this browser window to trigger the "resize" event handler.</p>
+
+<p id="demo"></p>
+
+<script>
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = Math.random();
+});
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example demonstrates how to pass parameter values when using the addEventListener() method.</p>
+
+<p>Click the button to perform a calculation.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+let p1 = 5;
+let p2 = 7;
+document.getElementById("myBtn").addEventListener("click", function() {
+  myFunction(p1, p2);
+});
+
+function myFunction(a, b) {
+  document.getElementById("demo").innerHTML = a * b;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDiv1, #myDiv2 {
+  background-color: coral;
+  padding: 50px;
+}
+
+#myP1, #myP2 {
+  background-color: white;
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+</style>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+</head>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<div id="myDiv1">
+  <h2>Bubbling:</h2>
+  <p id="myP1">Click me!</p>
+</div><br>
+
+<div id="myDiv2">
+  <h2>Capturing:</h2>
+  <p id="myP2">Click me!</p>
+</div>
+
+<script>
+document.getElementById("myP1").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, false);
+
+document.getElementById("myDiv1").addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, false);
+
+document.getElementById("myP2").addEventListener("click", function() {
+  alert("You clicked the white element!");
+}, true);
+
+document.getElementById("myDiv2").addEventListener("click", function() {
+  alert("You clicked the orange element!");
+}, true);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+  background-color: coral;
+  border: 1px solid;
+  padding: 50px;
+  color: white;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>JavaScript removeEventListener()</h2>
+
+<div id="myDIV">
+  <p>This div element has an onmousemove event handler that displays a random number every time you move your mouse inside this orange field.</p>
+  <p>Click the button to remove the div's event handler.</p>
+  <button onclick="removeHandler()" id="myBtn">Remove</button>
+</div>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+}
+</script>
+
+</body>
+</html>
+
+
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").firstChild.nodeValue;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").childNodes[0].nodeValue;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.body</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = document.body.innerHTML;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.documentElement</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = document.documentElement.innerHTML;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeName;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+document.getElementById("id02").innerHTML = document.getElementById("id01").nodeType;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+const element = document.getElementById("div1");
+element.appendChild(para);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+const element = document.getElementById("div1");
+const child = document.getElementById("p1");
+element.insertBefore(para,child);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Remove an HTML Element.</h3>
+
+<div>
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+
+<script>
+function myFunction() {
+document.getElementById("p1").remove();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Remove Child Element</p>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+const parent = document.getElementById("div1");
+const child = document.getElementById("p1");
+parent.removeChild(child);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Replace an HTML Element.</h3>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is a paragraph.</p>
+</div>
+
+<script>
+const parent = document.getElementById("div1");
+const child = document.getElementById("p1");
+const para = document.createElement("p");
+const node = document.createTextNode("This is new.");
+para.appendChild(node);
+parent.replaceChild(para,child);
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p id="demo"></p>
+
+<script>
+const myCollection = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p id="demo"></p>
+
+<script>
+const myCollection = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";
+
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Hello World!</p>
+
+<p>Hello Norway!</p>
+
+<p>Click the button to change the color of all p elements.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  const myCollection = document.getElementsByTagName("p");
+  for (let i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Window</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px";
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Screen width is " + screen.width;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Screen height is " + screen.height;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Available screen width is " + screen.availWidth;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Available screen height is " + screen.availHeight;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Screen color depth is " + screen.colorDepth;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Screen pixel depth is " + screen.pixelDepth;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The full URL of this page is:<br>" + window.location.href;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Page hostname is: " + window.location.hostname;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Page path is: " + window.location.pathname;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The page protocol is: " + window.location.protocol;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<p><b>Note: </b>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing.</p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"The URL port number of the current page is: " + window.location.port;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+
+<script>
+function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.cookieEnabled is " + navigator.cookieEnabled;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The appName property returns the application name of the browser:</p>
+
+<p id="demo"></p>
+
+<p>Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.</p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.appName is " + navigator.appName;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Navigator</h2>
+
+<p>The appCodeName property returns the code name of the browser.</p>
+
+<p>Do not rely on it! "Mozilla" is the application code name for Chrome, Firefox, IE, Safari, and Opera.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The product property returns the product name of the browser.</p>
+
+<p>Do not rely on it! Most browsers returns "Gecko" as product name!</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.product is " + navigator.product;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The appVersion property returns version information about the browser:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = navigator.appVersion;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The userAgent property returns the user-agent header sent by the browser to the server:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+navigator.userAgent;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The platform property returns the browser platform (operating system):</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.platform is " + navigator.platform;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The language property returns the browser's language:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.language is " + navigator.language;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The onLine property returns true if the browser is online:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"navigator.onLine is " + navigator.onLine;
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The javaEnabled() method returns true if Java is enabled:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"javaEnabled is " + navigator.javaEnabled();
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Confirm Box</h2>
+
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+<p>Line-breaks in a popup box.</p>
+
+<button onclick="alert('Hello\nHow are you?')">Try it</button>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+
+<script>
+function myFunction() {
+  alert('Hello');
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+function myFunction() {
+  alert("Hello");
+}
+</script>
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<script>
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p>A script on this page starts this clock:</p>
+
+<p id="demo"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+let myVar = setInterval(myTimer ,1000);
+function myTimer() {
+  const d = new Date();
+  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
+
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+!**********************************************************************************
+
