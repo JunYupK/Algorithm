@@ -1,5 +1,3 @@
-from collections import deque
-data = ["a", "MUZI", "muzi", "mUzi","a","ac","b","add"]
-q = deque(data)
-q = q.reverse()
-print(data[::-1])
+data = 'abcdefghijklmnop'
+dic = {k:v for k,v in zip(data,list(range(1,27)))}
+print(dic)
