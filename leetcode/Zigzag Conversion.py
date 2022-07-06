@@ -20,6 +20,6 @@
             for data in answer:
                 result += data
             return "".join(result)
-    sol = Solution()
-    s = "PAYPALISHIRING"
-    sol.convert(s,4)
+sol = Solution()
+s = "PAYPALISHIRING"
+sol.convert(s,4)
