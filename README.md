@@ -10,7 +10,7 @@ https://programmers.co.kr/
 
 
 
-![화면 캡처 2022-06-26 222920](https://user-images.githubusercontent.com/53340295/175816462-c2f7d024-8843-4d59-8f07-26d55589dae6.png)
+![화면 캡처 2022-11-22 142539](https://user-images.githubusercontent.com/53340295/203229277-b4e4a27a-ab67-4a70-84fe-1c7ea1580afe.png)
 
 https://www.acmicpc.net/
 
@@ -25,4 +25,4 @@ https://leetcode.com/
 
 
 
-2022-06-26 my tier!
+2022-11-22 my tier!
