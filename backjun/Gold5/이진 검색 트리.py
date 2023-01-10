@@ -1,5 +1,6 @@
 import sys
 input = sys.stdin.readline
+sys.setrecursionlimit(10000)
 arr = []
 while True:
     try:
@@ -8,12 +9,16 @@ while True:
         break
 answer = []
 def findTree(left, right):
-    if left > right or right >= len(arr):
+    if left > right:
         return
+    mid = right + 1
+    answer.append(arr[left])
+    for i in range(left + 1 ,right+1):
+        if arr[i] > arr[left]:
+            mid = i
+            break
+    findTree(left+1, mid - 1)
+    findTree(mid, right)
+    print(arr[left])
 
-    for i in range(right+1, len(arr)):
-        if arr[right] > arr[i]:
-
-
-findTree(0,0)
-print(answer)
+findTree(0,len(arr)-1)
