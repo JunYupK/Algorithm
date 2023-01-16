@@ -1,20 +1,24 @@
-def solution(p):
-    answer = []
-    num_dic = {}
-    for num in range(len(p)):
-        num_dic[num] = 0
-    i = 0
-    count = 0
-    while i != len(p):
-        j = p.index(min(p[i:]))
-        if p[i] != p[j]:
-            tmp = p[i]
-            p[i] = p[j]
-            p[j] = tmp
-            num_dic[i] += 1
-            num_dic[j] += 1
-        i += 1
-    return list(num_dic.values())
+s = input()
+start = 0
+end = len(s) - 1
+check = {}
+for c in s:
+    if c in check:
+        check[c] += 1
+    else:
+        check[c] = 1
 
-p = [2, 5, 3, 1,4]
-solution(p)
+
+def check_even(check):
+    for key, val in check.items():
+        if val % 2 != 0:
+            return False
+    return True
+
+
+while start < end:
+    if check[s[start]] % 2 != 0:
+        check[s[start]] -= 1
+        start += 1
+    elif check[[]]
+        100000
