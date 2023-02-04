@@ -7,7 +7,6 @@ pure_board, check = [], []
 moves = ["UP", "DOWN", "LEFT", "RIGHT"]
 for _ in range(N):
     pure_board.append(list(map(int, input().split())))
-
 def simulation(moves_list, board):
     for move in moves_list:
         if move == "UP":
@@ -129,7 +128,6 @@ def simulation(moves_list, board):
                             board[i][next_y - 1] = 0
                             next_y -= 1
     return board
-
 _max = 0
 for move in product(moves, repeat=5):
     check = [pure_board[i][:] for i in range(N)]
