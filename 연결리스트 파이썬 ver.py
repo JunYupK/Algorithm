@@ -1,29 +1,32 @@
-class Node:
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
+from collections import deque
 
 
-def print_node(node):
-    while node != None:
-        print(node.data)
-        node = node.next
-def add_node(head, data):
-    curr_node = head
-    new_node = Node(data)
-    while curr_node.next != None:
-        curr_node = curr_node.next
-    curr_node.next = new_node
-def remove_node(head, target):
-    prev_node = head
-    curr_node = head.next
-    while curr_node.data != target:
-        prev_node = curr_node
-        curr_node = curr_node.next
-    prev_node.next = curr_node.next
+def solution(users, emoticons):
+    sales = [10, 20, 30, 40]
+    check = [0] * len(emoticons)
+    answer = []
 
-Head = Node(0)
-for i in range(1,11):
-    add_node(Head,i)
-remove_node(Head,9)
-print_node(Head)
+    def backtracking(depth):
+        if depth == len(emoticons):
+            count = 0
+            result = 0
+            for standard, cost in users:
+                sum = 0
+                for i in range(len(check)):
+                    value = emoticons[i] - int(emoticons[i] * (check[i] / 100))
+                    if standard <= check[i]:
+                        sum += value
+                if sum >= cost:
+                    count += 1
+                    result -= sum
+                result += sum
+            answer.append([count, result])
+            return
+        for i in range(len(sales)):
+            check[depth] = sales[i]
+            backtracking(depth + 1)
+            check[depth] = 0
+
+    backtracking(0)
+    answer.sort(key=lambda x: (x[0], x[1]))
+    return answer[-1]
