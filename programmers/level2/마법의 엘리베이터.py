@@ -1,19 +1,23 @@
 from collections import deque
+_MAX = 100000000
 def solution(storey):
-    count = len(str(storey))
     q = deque()
-    q.append((0, storey))
+    q.append((storey, 0))
+    visited = [False] * (_MAX + 1)
     while q:
-        print(q)
-        num, target = q.popleft()
-        if target < 0:
-            continue
-        if target == 0:
-            return num
-        tmp = 1
-        for _ in range(count-1):
-            q.append((num+1, target + tmp))
-            q.append((num + 1, target - tmp))
-            tmp *= 10
+        num, count = q.popleft()
+        print(num)
+        if num == 0:
+            return count
+        increment = 1
+        while 1:
+            tmp_num = increment + num
+            if tmp_num > _MAX:
+                break
+            q.append((tmp_num, count + 1))
+            increment *= 10
+
+
+
 
 solution(1325)
