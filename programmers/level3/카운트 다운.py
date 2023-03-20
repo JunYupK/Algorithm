@@ -13,7 +13,6 @@ def create_table():
     return arr
 def solution(target):
     table = create_table()
-
     dp = [[INF, 0] for _ in range(target + 1)]
     dp[0][0] = 0
 

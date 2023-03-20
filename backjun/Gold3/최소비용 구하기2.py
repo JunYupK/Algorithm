@@ -1,4 +1,4 @@
-import heapq
+ import heapq
 n = int(input())
 m = int(input())
 graph = [[] for _ in range(n+1)]
