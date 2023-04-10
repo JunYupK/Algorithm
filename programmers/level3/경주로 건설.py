@@ -1,4 +1,4 @@
-from collections import deque
+햣 from collections import deque
 def solution(board):
     answer = 0
     n = len(board)
