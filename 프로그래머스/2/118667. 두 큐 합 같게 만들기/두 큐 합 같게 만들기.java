@@ -27,7 +27,7 @@ class Solution {
                 q1.add(n2);
             }
             answer++;
-            if(answer >= 300000) break;
+            if(answer >= 299999) break;
         }
         
         return -1;
