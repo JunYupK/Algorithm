@@ -20,7 +20,7 @@ class Main {
         long cost = 0;
         for (int i = 0; i < N-1; i++) {
             min = Math.min(arr[i], min);
-            cost += min * distance[i];
+            cost += (long) min * distance[i];
         }
         System.out.println(cost);
     }
